@@ -1,0 +1,1 @@
+# odoo_quote_import

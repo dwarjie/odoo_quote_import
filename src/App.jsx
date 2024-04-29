@@ -1,10 +1,18 @@
 import readXlsxFile from "read-excel-file";
+import schema from "./utils/schema";
 
 function App() {
 	const handleUpload = (e) => {
-		if (!e.target.files[0]) return;
+		let inputFile = e.target.files[0];
+		if (!inputFile) return;
 
-		console.log(e);
+		readXlsxFile(inputFile, { schema, ignoreEmptyRows: false })
+			.then((data) => {
+				console.log(data);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	};
 
 	return (

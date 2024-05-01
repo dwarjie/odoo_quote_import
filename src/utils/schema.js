@@ -19,14 +19,12 @@ const schema = {
 	Quantity: {
 		prop: "quantity",
 		type: Number,
+		required: (row) => row.product != null,
 	},
 	"Unit Price": {
 		prop: "unit_price",
 		type: Number,
-	},
-	Subtotal: {
-		prop: "subtotal",
-		type: Number,
+		required: (row) => row.product != null,
 	},
 };
 

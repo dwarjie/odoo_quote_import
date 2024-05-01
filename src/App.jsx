@@ -8,7 +8,7 @@ function App() {
 
 		readXlsxFile(inputFile, { schema, ignoreEmptyRows: false })
 			.then(({ rows, errors }) => {
-				console.table(rows);
+				console.log(rows);
 				console.log(errors);
 			})
 			.catch((err) => {

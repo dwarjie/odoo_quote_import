@@ -11,3 +11,9 @@
 - [ ] Format Validation (e.g., column headers)
 - [ ] File Processing
 - [ ] Import File Creation
+
+### Tools/Language
+
+- ReactJS
+- read-excel-file (reading of excel file)
+- Vitest (for testing)

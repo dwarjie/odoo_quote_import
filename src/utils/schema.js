@@ -7,8 +7,8 @@ const schema = {
 	Product: {
 		prop: "product",
 		type: String,
-		required: (display_type) => {
-			if (!display_type) return true;
+		required: (row) => {
+			if (row.display_type == null) return true;
 		},
 	},
 	Description: {

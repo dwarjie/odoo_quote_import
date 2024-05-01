@@ -7,8 +7,9 @@ function App() {
 		if (!inputFile) return;
 
 		readXlsxFile(inputFile, { schema, ignoreEmptyRows: false })
-			.then((data) => {
-				console.log(data);
+			.then(({ rows, errors }) => {
+				console.table(rows);
+				console.log(errors);
 			})
 			.catch((err) => {
 				console.log(err);

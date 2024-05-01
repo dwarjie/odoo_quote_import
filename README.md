@@ -5,7 +5,9 @@
 ### TODO
 
 - [x] Initial Setup
-- [ ] Create File Schema
-- [ ] Format Validation
+- [x] Create File Schema
+- [x] Required Columns Validation
+- [x] Create Test Case for Required Columns Validation
+- [ ] Format Validation (e.g., column headers)
 - [ ] File Processing
 - [ ] Import File Creation

@@ -8,8 +8,9 @@ function App() {
 
 		readXlsxFile(inputFile, { schema, ignoreEmptyRows: false })
 			.then(({ rows, errors }) => {
-				console.log(rows);
-				console.log(errors);
+				if (errors) return console.log(errors);
+
+				// TODO: Process the imported file and create an equivalent odoo file (using write-excel-file lib)
 			})
 			.catch((err) => {
 				console.log(err);

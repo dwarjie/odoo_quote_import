@@ -21,7 +21,7 @@ describe("read-excel-file", () => {
 		}).then(({ rows, errors }) => {
 			expect(errors).equal([
 				{
-					column: "Product",
+					column: "Display",
 					error: "required",
 					row: 2,
 					type: String,

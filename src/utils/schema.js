@@ -1,15 +1,13 @@
+const displayType = {
+	note: "Note",
+	section: "Section",
+};
+
 const schema = {
-	"Display Type": {
-		prop: "display_type",
-		type: String,
-		oneOf: ["Section", "Note"],
-	},
 	Product: {
-		prop: "product",
+		prop: "display",
 		type: String,
-		required: (row) => {
-			if (row.display_type == null) return true;
-		},
+		required: true,
 	},
 	Description: {
 		prop: "desc",
@@ -19,12 +17,14 @@ const schema = {
 	Quantity: {
 		prop: "quantity",
 		type: Number,
-		required: (row) => row.product != null,
+		required: (row) =>
+			row.display != displayType.note || row.display != displayType.section,
 	},
 	"Unit Price": {
 		prop: "unit_price",
 		type: Number,
-		required: (row) => row.product != null,
+		required: (row) =>
+			row.display != displayType.note || row.display != displayType.section,
 	},
 };
 

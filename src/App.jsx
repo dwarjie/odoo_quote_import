@@ -10,6 +10,8 @@ function App() {
 			.then(({ rows, errors }) => {
 				if (errors) return console.log(errors);
 
+				console.log(rows);
+
 				// TODO: Process the imported file and create an equivalent odoo file (using write-excel-file lib)
 			})
 			.catch((err) => {

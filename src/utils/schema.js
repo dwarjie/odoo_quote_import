@@ -4,7 +4,7 @@ const displayType = {
 };
 
 const schema = {
-	Product: {
+	Display: {
 		prop: "display",
 		type: String,
 		required: true,
@@ -17,14 +17,12 @@ const schema = {
 	Quantity: {
 		prop: "quantity",
 		type: Number,
-		required: (row) =>
-			row.display != displayType.note || row.display != displayType.section,
+		required: (row) => row.display !== "Note" && row.display !== "Section",
 	},
 	"Unit Price": {
 		prop: "unit_price",
 		type: Number,
-		required: (row) =>
-			row.display != displayType.note || row.display != displayType.section,
+		required: (row) => row.display !== "Note" && row.display !== "Section",
 	},
 };
 

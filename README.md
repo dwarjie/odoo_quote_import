@@ -8,9 +8,12 @@
 - [x] Create File Schema
 - [x] Required Columns Validation
 - [x] Create Test Case for Required Columns Validation
+- [ ] Add inputs to add Quote ID, maybe Tax too?
 - [ ] Format Validation (e.g., column headers)
+- [ ] Deployment to Github Pages
 - [ ] File Processing
 - [ ] Import File Creation
+- [ ] Styling
 
 ### Tools/Language
 
